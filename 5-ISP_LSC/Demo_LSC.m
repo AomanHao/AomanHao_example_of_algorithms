@@ -10,7 +10,7 @@ clc;
 
 addpath('./algorithms/');
 
-pathname = './data/';
+pathname = './data/cell/';
 img_conf = dir(pathname);
 img_name = {img_conf.name};
 img_num = numel({img_conf.name})-2;
@@ -48,6 +48,12 @@ for j = 1:numel(methods)
         switch LSC_type
             case 'cos4'
                 Iout = LSC_cos4(img_in);
+                
+            case 'BaSiC'
+                Iout = BaSiC(img_in);
+                
+            case 'LG'
+                Iout = LSC_LG(img_in);
                 
         end
         imwrite(uint8(Iout),strcat(conf.savepath,conf.imgname,'_',LSC_type,'.png'));
