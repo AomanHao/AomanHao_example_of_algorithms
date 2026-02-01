@@ -48,8 +48,8 @@ for j = 1:numel(methods)
     
     %% Single channel data only
     switch LSC_type
-        
-        case 'LSC_sscnew'
+        case 'LSC_sscnew' 
+            %paper <Simple Shading Correction Method for Brightfield>
             [Iout, flatfield_model] = LSC_sscnew(img_in);
     end
     for i = 1:img_num
