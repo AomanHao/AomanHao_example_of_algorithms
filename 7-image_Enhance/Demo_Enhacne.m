@@ -47,7 +47,6 @@ for i = 1:img_num
     conf.omega=0.85;
     conf.t0=0.1;
     conf.win_size=15;
-    conf.gamma=1;
     img_out = func_infrared_enhance(img_in,conf);
     figure;    imshow(img_in);
     figure;    imshow(img_out);
