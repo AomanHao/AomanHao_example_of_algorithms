@@ -37,12 +37,13 @@ for i = 1:img_num
     tic;
     switch dedust_type
         case 'Linear'
-            %Linear correction
+            %paper<A fusion-based enhancing approach for single sandstorm image>
             conf.para = 10;
             result = Dedust_Linear(img,conf);
             
             
         case 'BlueComp'
+            %paper<A_Fast_Sand-Dust_Image_Enhancement_Algorithm_by_Blue_Channel_Compensation_and_Guided_Image_Filtering>
             result = Dedust_BlueComp(img);
     end
     toc;
