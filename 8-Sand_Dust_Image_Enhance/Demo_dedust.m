@@ -21,7 +21,7 @@ if ~exist(conf.savepath,'var')
     mkdir(conf.savepath)
 end
 
-dedust_type = 'BlueComp';
+dedust_type = 'BaseGreen';
 for i = 1:img_num
     switch data_type
         case 'bmp'
@@ -45,6 +45,11 @@ for i = 1:img_num
         case 'BlueComp'
             %paper<A_Fast_Sand-Dust_Image_Enhancement_Algorithm_by_Blue_Channel_Compensation_and_Guided_Image_Filtering>
             result = Dedust_BlueComp(img);
+            
+        case 'BaseGreen'
+            %paper<Sand-Dust Image Enhancement Using Successive Color Balance With Coincident Chromatic Histogram>
+            result = Dedust_baseGreen(img);
+    
     end
     toc;
     t=toc;
