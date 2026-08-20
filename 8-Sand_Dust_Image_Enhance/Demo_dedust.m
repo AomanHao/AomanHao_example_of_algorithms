@@ -48,7 +48,7 @@ for i = 1:img_num
             
         case 'BaseGreen'
             %paper<Sand-Dust Image Enhancement Using Successive Color Balance With Coincident Chromatic Histogram>
-            result = Dedust_baseGreen(img);
+            result = Dedust_BaseGreen(img);
     
     end
     toc;
